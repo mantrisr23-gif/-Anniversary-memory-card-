@@ -49,7 +49,8 @@ export default function Home() {
             className="cursor-pointer hover:opacity-90 transition-opacity duration-700 min-h-screen flex items-center justify-center"
             title="Click to open the archive"
           >
-            <BookCover />
+            ```tsx
+<BookCover onOpen={() => setViewState('timeline')} />
           </div>
         </motion.main>
       )}
@@ -87,7 +88,7 @@ export default function Home() {
 
                 {/* 2. THE CARD & 3. THE TITLE (InteractiveMemory component handles the title at its bottom) */}
                 <InteractiveMemory 
-                  src={chapter.content[0].imageUrl} 
+                 src={chapter.content[0].imageUrl || ""}
                   title={chapter.title}
                   alt={chapter.title}
                   hiddenText={chapter.content[0].secretNote} 
