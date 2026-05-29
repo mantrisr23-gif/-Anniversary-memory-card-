@@ -12,9 +12,9 @@ export const SmoothScrollProvider = ({ children }: { children: React.ReactNode }
         lerp: 0.05,
         duration: 1.5,
         smoothWheel: true,
-      }}
+     }}
     >
-      {children}
+      {children as any}
     </ReactLenis>
   );
 };
