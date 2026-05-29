@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Royal Color Palette */
+.bg-vintage { 
+  background-color: #0f172a; /* Deep Royal Navy */
+  color: #f8fafc; 
+}
+.bg-cream { 
+  background-color: #fef3c7; /* Champagne Gold */
+  color: #451a03; 
+}
+.bg-sadness { 
+  background-color: #2e1065; /* Royal Purple */
+  color: #f5f3ff; 
+}
+.bg-night { 
+  background-color: #020617; /* Midnight Black */
+  color: #fbbf24; /* Gold accent */
+}
+.bg-warmth { 
+  background-color: #450a0a; /* Deep Burgundy */
+  color: #fef2f2; 
+}
+
+/* Texture Overlay - Add this to give it that "premium print" paper grain */
+.paper-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+}
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  pointer-events: none;
+}
+
+.radial-vignette {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+@keyframes drift {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-drift {
+  animation: drift 6s ease-in-out infinite;
+}
